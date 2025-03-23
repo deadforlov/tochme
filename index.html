@@ -20,6 +20,7 @@
         font-family: 'Arial', sans-serif;
         text-align: center;
         overflow: hidden;
+        flex-direction: column;
       }
 
       /* Видео на фоне */
@@ -31,6 +32,28 @@
         height: 100vh;
         object-fit: cover;
         z-index: -1;
+      }
+
+      /* Неоновый текст */
+      .neon-text {
+        font-size: 30px;
+        font-weight: bold;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-shadow: 0 0 5px #ff6ec4, 0 0 10px #ff6ec4, 0 0 15px #ff6ec4, 0 0 20px #ff6ec4, 0 0 25px #ff6ec4, 0 0 30px #ff6ec4;
+        animation: neon 1.5s ease-in-out infinite alternate;
+        z-index: 1;
+        margin-bottom: 20px;
+      }
+
+      @keyframes neon {
+        0% {
+          text-shadow: 0 0 5px #ff6ec4, 0 0 10px #ff6ec4, 0 0 15px #ff6ec4, 0 0 20px #ff6ec4, 0 0 25px #ff6ec4, 0 0 30px #ff6ec4;
+        }
+        100% {
+          text-shadow: 0 0 10px #ff6ec4, 0 0 20px #ff6ec4, 0 0 30px #ff6ec4, 0 0 40px #ff6ec4, 0 0 50px #ff6ec4, 0 0 60px #ff6ec4;
+        }
       }
 
       /* Стиль кнопки в стиле TikTok */
@@ -72,6 +95,11 @@
 
       /* Для мобильных устройств */
       @media (max-width: 768px) {
+        .neon-text {
+          font-size: 20px;
+          margin-bottom: 15px;
+        }
+
         .pulse-button {
           width: 220px;
           height: 60px;
@@ -86,6 +114,8 @@
         Ваш браузер не поддерживает видео.
     </video>
 
+    <div class="neon-text">Ready for some hot moments? 😈</div>
+    
     <a href="https://sektfeb.top/click?o=2&a=3126" class="pulse-button">
         PokeMe
     </a>
