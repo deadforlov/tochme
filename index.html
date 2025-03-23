@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Перенаправление...</title>
+    <title>Dating...</title>
     <style>
       * {
         margin: 0;
@@ -38,16 +38,16 @@
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        width: 220px;
-        height: 60px;
-        font-size: 18px;
+        width: 280px;
+        height: 80px;
+        font-size: 22px;
         font-weight: bold;
         color: #fff;
-        background: linear-gradient(135deg, #25F4D0, #FE2C77);
+        background: linear-gradient(145deg, #ff6ec4, #7873f5);
         border: none;
-        border-radius: 30px;
+        border-radius: 40px;
         cursor: pointer;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         transition: all 0.3s ease;
         text-decoration: none;
         animation: pulse 1.5s infinite;
@@ -55,26 +55,27 @@
       }
 
       .pulse-button:hover {
-        transform: scale(1.1);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        transform: scale(1.15);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        background: linear-gradient(145deg, #7873f5, #ff6ec4);
       }
 
       .pulse-button:active {
-        transform: scale(0.98);
+        transform: scale(0.95);
       }
 
       @keyframes pulse {
         0% { transform: scale(1); }
-        50% { transform: scale(1.1); }
+        50% { transform: scale(1.12); }
         100% { transform: scale(1); }
       }
 
       /* Для мобильных устройств */
       @media (max-width: 768px) {
         .pulse-button {
-          width: 180px;
-          height: 50px;
-          font-size: 16px;
+          width: 220px;
+          height: 60px;
+          font-size: 18px;
         }
       }
     </style>
