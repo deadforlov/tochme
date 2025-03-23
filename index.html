@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dating...</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet"> <!-- Подключение шрифта -->
     <style>
       * {
         margin: 0;
@@ -17,7 +18,7 @@
         align-items: center;
         height: 100vh;
         margin: 0;
-        font-family: 'Arial', sans-serif;
+        font-family: 'Poppins', sans-serif; /* Шрифт в стиле Instagram */
         text-align: center;
         overflow: hidden;
         flex-direction: column;
@@ -34,17 +35,17 @@
         z-index: -1;
       }
 
-      /* Неоновый текст */
+      /* Неоновый стиль текста с анимацией */
       .neon-text {
-        font-size: 30px;
+        font-size: 40px;
         font-weight: bold;
         color: #fff;
         text-transform: uppercase;
         letter-spacing: 2px;
         text-shadow: 0 0 5px #ff6ec4, 0 0 10px #ff6ec4, 0 0 15px #ff6ec4, 0 0 20px #ff6ec4, 0 0 25px #ff6ec4, 0 0 30px #ff6ec4;
-        animation: neon 1.5s ease-in-out infinite alternate;
+        animation: neon 1.5s ease-in-out infinite alternate, fadeIn 2s ease-out;
         z-index: 1;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
       }
 
       @keyframes neon {
@@ -53,6 +54,18 @@
         }
         100% {
           text-shadow: 0 0 10px #ff6ec4, 0 0 20px #ff6ec4, 0 0 30px #ff6ec4, 0 0 40px #ff6ec4, 0 0 50px #ff6ec4, 0 0 60px #ff6ec4;
+        }
+      }
+
+      /* Анимация для появления текста */
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(-30px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
         }
       }
 
@@ -96,7 +109,7 @@
       /* Для мобильных устройств */
       @media (max-width: 768px) {
         .neon-text {
-          font-size: 20px;
+          font-size: 25px;
           margin-bottom: 15px;
         }
 
